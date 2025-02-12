@@ -93,6 +93,7 @@ class DigitalCredentialsPresentmentTest {
         dcql: JsonObject
     ): TestOpenID4VPResponse {
         documentStoreTestHarness.initialize()
+        documentStoreTestHarness.provisionStandardDocuments()
 
         val presentmentModel = PresentmentModel()
 
