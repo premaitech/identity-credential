@@ -836,9 +836,11 @@ class App private constructor (val promptModel: PromptModel) {
                     }
                     composable(route = IsoMdocProximitySharingDestination.route) {
                         IsoMdocProximitySharingScreen(
+                            presentmentSource = getPresentmentSource(),
                             presentmentModel = presentmentModel,
                             settingsModel = settingsModel,
                             promptModel = promptModel,
+                            documentTypeRepository = documentTypeRepository,
                             onNavigateToPresentmentScreen = {
                                 navController.navigate(PresentmentDestination.route)
                             },
